@@ -7,5 +7,17 @@
  * 设计一个算法来计算你所能获取的最大利润。
  */
 public class LC121_BestTimeToBuyAndSellStock {
-    // TODO: 实现买卖股票的最佳时机的算法
+    public int maxProfit(int[] prices) {
+        int minPrice = Integer.MAX_VALUE;
+        int maxProfit = 0;
+        // 维护一个最小价格，一个最大利润
+        for (int price : prices) {
+            if (price < minPrice) {
+                minPrice = price;
+            } else if (price - minPrice > maxProfit) {
+                maxProfit = price - minPrice;
+            }
+        }
+        return maxProfit;
+    }
 } 

@@ -6,5 +6,15 @@
  * 你可以假设数组是非空的，并且给定的数组总是存在多数元素。
  */
 public class LC169_MajorityElement {
-    // TODO: 实现多数元素的算法
-} 
+    public int majorityElement(int[] nums) {
+        int count = 0;
+        int candidate = 0;
+        for (int num : nums) {
+            if (count == 0) {
+                candidate = num;
+            }
+            count += (num == candidate) ? 1 : -1;
+        }
+        return candidate;
+    }
+}
