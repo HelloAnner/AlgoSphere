@@ -1,3 +1,5 @@
+package com.anner.algosphere.array;
+
 /**
  * 118. 杨辉三角
  * https://leetcode.cn/problems/pascals-triangle/

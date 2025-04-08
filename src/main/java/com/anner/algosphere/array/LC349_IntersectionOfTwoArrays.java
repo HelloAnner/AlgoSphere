@@ -1,3 +1,5 @@
+package com.anner.algosphere.array;
+
 /**
  * 349. 两个数组的交集
  * https://leetcode.cn/problems/intersection-of-two-arrays/
