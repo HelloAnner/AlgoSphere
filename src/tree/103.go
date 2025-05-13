@@ -2,6 +2,7 @@ package tree
 
 // 103. 二叉树的锯齿形层序遍历
 // 给定一个二叉树，返回其节点值的锯齿形层序遍历。（即先从左往右，再从右往左进行下一层遍历，以此类推，层与层之间交替进行）。
+// 广度优先遍历
 
 
 func zigzagLevelOrder(root *TreeNode) [][]int {
@@ -25,6 +26,7 @@ func zigzagLevelOrder(root *TreeNode) [][]int {
 				queue = append(queue, node.Right)
 			}
 		}
+		// 添加到结果中
 		if leftToRight {
 			result = append(result, level)
 		} else {

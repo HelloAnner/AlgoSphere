@@ -9,11 +9,11 @@ package backtrace
 
 func permute(nums []int) [][]int {
 	ans := [][]int{}
-	backtrace(nums, []int{}, make([]bool, len(nums)), &ans)
+	backtrace1(nums, []int{}, make([]bool, len(nums)), &ans)
 	return ans
 }
 
-func backtrace(nums []int, path []int, used []bool, ans *[][]int) {
+func backtrace1(nums []int, path []int, used []bool, ans *[][]int) {
 	if len(path) == len(nums) {
 		*ans = append(*ans, append([]int{}, path...))
 		return
@@ -25,7 +25,7 @@ func backtrace(nums []int, path []int, used []bool, ans *[][]int) {
 		}
 		path = append(path, nums[i])
 		used[i] = true
-		backtrace(nums, path, used, ans)
+		backtrace1(nums, path, used, ans)
 		path = path[:len(path)-1]
 		used[i] = false
 	}
