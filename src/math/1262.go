@@ -1,4 +1,4 @@
-package greedy
+package math
 
 import "sort"
 
